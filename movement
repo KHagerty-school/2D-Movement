@@ -1,0 +1,21 @@
+import java.awt.*;
+import BreezyGUI.*;
+
+public class movement extends GBFrame {
+  public void movement () {
+  
+  }
+  public void paint (Graphics g) {
+    while (x >= 0 && x <= 190 && y >= 10 && y <= 200) {
+      if(ev.getKeyCode() == KeyEvent.VK_W)
+        y--;
+      else if(ev.getKeyCode() == KeyEvent.VK_S)
+        y++;
+      else if(ev.getKeyCode() == KeyEvent.VK_A)
+        x--;
+      else if(ev.getKeyCode() == KeyEvent.VK_D)
+        x++;
+      g.drawRect(x, y, 10, 10);
+    }
+  }
+}
